@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/aidanday.com/static/css/main.3c4ba5d8.css",
-    "main.js": "/aidanday.com/static/js/main.93004a84.js",
-    "static/js/453.209d4f9d.chunk.js": "/aidanday.com/static/js/453.209d4f9d.chunk.js",
-    "index.html": "/aidanday.com/index.html",
-    "main.3c4ba5d8.css.map": "/aidanday.com/static/css/main.3c4ba5d8.css.map",
-    "main.93004a84.js.map": "/aidanday.com/static/js/main.93004a84.js.map",
-    "453.209d4f9d.chunk.js.map": "/aidanday.com/static/js/453.209d4f9d.chunk.js.map"
+    "main.css": "/day22.github.io/static/css/main.3c4ba5d8.css",
+    "main.js": "/day22.github.io/static/js/main.09acef20.js",
+    "static/js/453.209d4f9d.chunk.js": "/day22.github.io/static/js/453.209d4f9d.chunk.js",
+    "index.html": "/day22.github.io/index.html",
+    "main.3c4ba5d8.css.map": "/day22.github.io/static/css/main.3c4ba5d8.css.map",
+    "main.09acef20.js.map": "/day22.github.io/static/js/main.09acef20.js.map",
+    "453.209d4f9d.chunk.js.map": "/day22.github.io/static/js/453.209d4f9d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3c4ba5d8.css",
-    "static/js/main.93004a84.js"
+    "static/js/main.09acef20.js"
   ]
 }
