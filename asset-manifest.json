@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/day22.github.io/static/css/main.3c4ba5d8.css",
-    "main.js": "/day22.github.io/static/js/main.09acef20.js",
-    "static/js/453.209d4f9d.chunk.js": "/day22.github.io/static/js/453.209d4f9d.chunk.js",
-    "index.html": "/day22.github.io/index.html",
-    "main.3c4ba5d8.css.map": "/day22.github.io/static/css/main.3c4ba5d8.css.map",
-    "main.09acef20.js.map": "/day22.github.io/static/js/main.09acef20.js.map",
-    "453.209d4f9d.chunk.js.map": "/day22.github.io/static/js/453.209d4f9d.chunk.js.map"
+    "main.css": "/static/css/main.3c4ba5d8.css",
+    "main.js": "/static/js/main.1306cae5.js",
+    "static/js/453.209d4f9d.chunk.js": "/static/js/453.209d4f9d.chunk.js",
+    "index.html": "/index.html",
+    "main.3c4ba5d8.css.map": "/static/css/main.3c4ba5d8.css.map",
+    "main.1306cae5.js.map": "/static/js/main.1306cae5.js.map",
+    "453.209d4f9d.chunk.js.map": "/static/js/453.209d4f9d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3c4ba5d8.css",
-    "static/js/main.09acef20.js"
+    "static/js/main.1306cae5.js"
   ]
 }
