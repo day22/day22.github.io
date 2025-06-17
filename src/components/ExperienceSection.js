@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import './ExperienceSection.css';
 
 import saifLogo from'../public/imgs/saif-logo.jpg'
+import viewpointLogo from'../public/imgs/viewpoint_logo.jpg'
 
 const ExperienceSection = () => {
   const sectionRef = useRef(null);
@@ -28,12 +29,38 @@ const ExperienceSection = () => {
       className={`experience-section py-5 bg-light fade-in-section ${isVisible ? 'is-visible' : ''}`}
     >
       <div className="container">
-        <h2 className="section-title text-center mb-4">Current Experience</h2>
-        <div className="card experience-card mx-auto shadow-sm">
+        <h2 className="section-title text-center mb-4">Experience</h2>
+        <div className="card experience-card mx-auto shadow-sm mb-4">
           <div className="card-body">
             <div className="d-flex align-items-start">
               <img 
                 src={saifLogo}
+                alt='SAIF Corp Logo'
+                className='experience-icon rounded-circle me-3'
+              />
+              <div>
+                <h3 className="card-title mb-1">Software Development Engineer in Test Intern</h3>
+                <p className="company mb-0">
+                  <strong>Viewpoint, Trimble</strong> &middot; Full-time
+                </p>
+                <p className="dates-location text-muted">
+                  May 2021 &ndash; Aug 2021 &middot; Portland, Oregon, United States
+                </p>
+              </div>
+            </div>
+            <ul className="mt-3 list-unstyled experience-list">
+              <li>Automated managerial and developer processes utilizing Azure API within C# console applications.</li>
+              <li>Caught human errors and increased efficiency by saving one hour before each RTM.</li>
+              <li>Operated within an Agile scrum team using Git to integrate code into the complex code base.</li>
+              <li>Overhauled project documentation with wikis and comments to ensure the project was reproducible and reusable.</li>
+            </ul>
+          </div>
+        </div>
+        <div className="card experience-card mx-auto shadow-sm">
+          <div className="card-body">
+            <div className="d-flex align-items-start">
+              <img 
+                src={viewpointLogo}
                 alt='SAIF Corp Logo'
                 className='experience-icon rounded-circle me-3'
               />
@@ -57,7 +84,7 @@ const ExperienceSection = () => {
               <li>Implemented and maintained monitoring and alerting systems to detect and notify on application issues, resulting in faster resolution of critical issues.</li>
             </ul>
           </div>
-        </div>
+        </div>+
       </div>
     </section>
   );

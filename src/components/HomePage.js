@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import profilePic from '../public/imgs/profile2.jpg';
 import './HomePage.css';
 import ExperienceSection from './ExperienceSection';
+import ContactPage from './ContactPage';
 
 const HomePage = () => {
   const sectionRef = useRef(null);
@@ -27,7 +28,7 @@ const HomePage = () => {
         <div className="overlay"></div>
         <div className="container vh-100 d-flex align-items-center position-relative">
           <div className="row w-100">
-          <div className="col-md-6 d-flex justify-content-center align-items-center">
+            <div className="col-md-6 d-flex justify-content-center align-items-center">
               <div className="profile-frame">
                 <img src={profilePic} alt="Aidan Day" className="img-fluid" />
               </div>
@@ -36,17 +37,17 @@ const HomePage = () => {
               <h1 className="display-3 name-text mb-3">Aidan Day</h1>
               <p className="lead paragraph-text">
                 I am a software engineer with a passion for building high-quality, scalable systems. I thrive in collaborative environments and communicate effectively across technical and non-technical teams. In my free time, I explore new cloud architectures and emerging technologies.
-              </p>
+              </p>  
               <div className="mt-4">
                 <a href="#experience" className="btn btn-primary btn-lg me-3">View Experience</a>
                 <a href="/contact" className="btn btn-outline-light btn-lg">Get in Touch</a>
               </div>
             </div>
-            
           </div>
         </div>
       </div>
       <ExperienceSection />
+      <ContactPage />
     </>
   );
 };
