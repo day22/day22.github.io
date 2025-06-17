@@ -84,7 +84,7 @@ const ExperienceSection = () => {
               <li>Implemented and maintained monitoring and alerting systems to detect and notify on application issues, resulting in faster resolution of critical issues.</li>
             </ul>
           </div>
-        </div>+
+        </div>
       </div>
     </section>
   );

@@ -1,51 +1,71 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import profilePic from '../public/imgs/profile2.jpg';
 import './HomePage.css';
 import ExperienceSection from './ExperienceSection';
 import ContactPage from './ContactPage';
 
 const HomePage = () => {
-  const sectionRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [stage, setStage] = useState(0);
+  const [visible, setVisible] = useState(false);
 
+  // Sequence: name → description → image+CTAs
+  useEffect(() => {
+    const t1 = setTimeout(() => setStage(1), 2000);
+    const t2 = setTimeout(() => setStage(2), 2000);
+    return () => { clearTimeout(t1); clearTimeout(t2); };
+  }, []);
+
+  // Fade-in on scroll
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
+          setVisible(true);
           observer.disconnect();
         }
-      },
-      { threshold: 0.2 }
+      }, { threshold: 0.2 }
     );
-    if (sectionRef.current) observer.observe(sectionRef.current);
+    const elem = document.getElementById('hero');
+    if (elem) observer.observe(elem);
     return () => observer.disconnect();
   }, []);
 
   return (
     <>
-      <div ref={sectionRef} className={`container-fluid homepage fade-in-section ${isVisible ? 'is-visible' : ''}`}>
-        <div className="overlay"></div>
-        <div className="container vh-100 d-flex align-items-center position-relative">
-          <div className="row w-100">
-            <div className="col-md-6 d-flex justify-content-center align-items-center">
-              <div className="profile-frame">
-                <img src={profilePic} alt="Aidan Day" className="img-fluid" />
+      <section
+        id="hero"
+        className={`homepage fade-in-section ${visible ? 'is-visible' : ''}`}
+      >
+        <div className="overlay" />
+        <div className="hero-content">
+          <h1 className={`name-text ${stage < 1 ? 'expand' : 'shrink'}`}>Welcome!</h1>
+
+          {stage >= 1 && (
+            <>
+              <div className="actions-container transition" style={{ transitionDelay: '1600ms' }}>
+                <div className="profile-frame">
+                  <img src={profilePic} alt="Aidan Day" />
+                </div>
               </div>
-            </div>
-            <div className="col-md-6 d-flex flex-column justify-content-center">
-              <h1 className="display-3 name-text mb-3">Aidan Day</h1>
-              <p className="lead paragraph-text">
-                I am a software engineer with a passion for building high-quality, scalable systems. I thrive in collaborative environments and communicate effectively across technical and non-technical teams. In my free time, I explore new cloud architectures and emerging technologies.
-              </p>  
-              <div className="mt-4">
-                <a href="#experience" className="btn btn-primary btn-lg me-3">View Experience</a>
-                <a href="/contact" className="btn btn-outline-light btn-lg">Get in Touch</a>
+            </>
+
+          )}
+
+          {stage >= 2 && (
+            <>
+              <p className="lead description transition" style={{ transitionDelay: '600ms' }}>
+              I am Aidan, a software engineer with a passion for building high-quality, scalable systems. I love working with people of both technical and non-technical backgrounds. In my free time, I enjoy staying up to date with the latest developments in cloud architecture and exploring new technologies in this space.
+              </p>
+              <div className="cta-buttons">
+                <a href="#experience" className="btn btn-primary btn-lg mb-1">View Experience</a>
+                <a href="/contact" className="btn btn-outline-light btn-lg mb-1">Get in Touch</a>
               </div>
-            </div>
-          </div>
+            </>
+
+          )}
         </div>
-      </div>
+      </section>
+
       <ExperienceSection />
       <ContactPage />
     </>

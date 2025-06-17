@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <footer className="footer bg-dark text-light py-4 fixed-bottom">
       <div className="container d-flex flex-column flex-md-row justify-content-between align-items-center">
-        <div className="social-links mb-3 mb-md-0">
+        <div className="social-links mb-1 mb-md-0">
           <a href="https://github.com/day22" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <FontAwesomeIcon icon={faGithub} size="2x" />
           </a>
