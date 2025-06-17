@@ -1,0 +1,43 @@
+/* src/components/AboutPage.css */
+
+.about-page {
+    background-color: #f8f9fa; /* Light background for contrast */
+  }
+  
+  .about-info {
+    color: #343a40; /* Dark text color for readability */
+  }
+  
+  .about-info h1 {
+    font-weight: bold;
+    font-size: 3rem;
+  }
+  
+  .about-info p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  .about-image-container img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Adds a shadow for modern look */
+  }
+  
+  @media (max-width: 768px) {
+    .about-info h1 {
+      font-size: 2.5rem;
+    }
+  
+    .about-info p {
+      font-size: 1.1rem;
+    }
+  
+    .about-image-container img {
+      width: 250px;
+      height: 250px;
+    }
+  }
+  

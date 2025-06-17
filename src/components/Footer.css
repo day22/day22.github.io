@@ -1,0 +1,46 @@
+/* Footer.css */
+
+.footer {
+  width: 100%;
+  position: relative; /* stays in the normal flow */
+  background-color: #212529; /* Bootstrap dark */
+  color: #dee2e6;          /* Bootstrap light */
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+  border-radius: 12px 12px 0 0;
+
+}
+
+/* Container flex already handled by Bootstrap utility classes */
+
+.social-links a {
+  display: inline-block;
+  margin: 0 0.5rem;
+  color: #adb5bd;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.social-links a:hover {
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+.social-links a:focus {
+  outline: 2px solid #0d6efd; /* accessible focus ring */
+  outline-offset: 4px;
+}
+
+.footer-copy {
+  color: #6c757d;
+}
+
+/* On small screens we center-align text; on md+ it’s justified by the parent flex */
+.footer .container {
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .footer .container {
+    justify-content: space-between;
+  }
+}

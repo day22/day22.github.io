@@ -1,0 +1,30 @@
+/* Header.css */
+
+.navbar {
+  transition: all 0.3s ease;
+  border-radius: 0 0 12px 12px;
+}
+
+.custom-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.custom-link:hover {
+  color: #2e81b3; /* Bootstrap primary color or your own */
+}
+
+.custom-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #2e81b3;
+  transition: width 0.3s;
+}
+
+.custom-link:hover::after {
+  width: 100%;
+}
